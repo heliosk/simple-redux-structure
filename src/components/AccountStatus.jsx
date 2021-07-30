@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 const AccountStatus = () => {
     
-    const isSavingsAccount = useSelector(state => state.isSavingsAccount);
+    const isSavingsAccount = useSelector(state => state.banking.isSavingsAccount);
     
     return (
         <div>
@@ -12,4 +12,4 @@ const AccountStatus = () => {
     );
 }
 
-export default AccountStatus
+export default AccountStatus;

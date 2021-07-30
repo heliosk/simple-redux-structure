@@ -1,6 +1,7 @@
 const initialState = {
     balance: 0,
-    isSavingAccount: false
+    isSavingAccount: false,
+    isLoggedIn: false
 };
 
 export const bankingReducer = (state = initialState, action) => {
@@ -12,7 +13,7 @@ export const bankingReducer = (state = initialState, action) => {
         case 'COLLECT_INTEREST':
             return { ...state, balance: state.balance * 1.03 };
         case 'DELETE_ACCOUNT':
-            return { balance: 0 };
+            return { ...state, balance: 0 };
         case 'TOGGLE_ACCOUNT':
             return { ...state, isSavingsAccount: !state.isSavingsAccount };
         default:
