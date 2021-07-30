@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux'
 
 const Balance = () => {
 
-    const balance = useSelector((state) => state.banking.balance);
+    const balance = useSelector((state) => state.balance);
+
+    const store = useSelector(state => state);
 
     return (
         <div>
